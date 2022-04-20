@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="ROBOT2GDL.SLDASM">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0017289 0.46145 -1.0068E-07"
+        rpy="0 0 0" />
+      <mass
+        value="96.656" />
+      <inertia
+        ixx="12.672"
+        ixy="-0.084853"
+        ixz="2.6395E-08"
+        iyy="1.8671"
+        iyz="5.2536E-06"
+        izz="12.699" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ROBOT2GDL.SLDASM/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ROBOT2GDL.SLDASM/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Eslabon1">
+    <inertial>
+      <origin
+        xyz="0.31663 -3.3307E-16 0.079158"
+        rpy="0 0 0" />
+      <mass
+        value="31.875" />
+      <inertia
+        ixx="0.23186"
+        ixy="-1.2351E-15"
+        ixz="-0.011049"
+        iyy="1.9762"
+        iyz="-4.7271E-17"
+        izz="2.0763" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ROBOT2GDL.SLDASM/meshes/Eslabon1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ROBOT2GDL.SLDASM/meshes/Eslabon1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint0"
+    type="revolute">
+    <origin
+      xyz="0.15 0 0.96927"
+      rpy="1.5708 -0.34574 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Eslabon1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Eslabon2">
+    <inertial>
+      <origin
+        xyz="0.30855 6.6613E-16 0.076426"
+        rpy="0 0 0" />
+      <mass
+        value="30.991" />
+      <inertia
+        ixx="0.22208"
+        ixy="-4.8243E-15"
+        ixz="0.013631"
+        iyy="1.8934"
+        iyz="7.546E-17"
+        izz="2.0009" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ROBOT2GDL.SLDASM/meshes/Eslabon2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ROBOT2GDL.SLDASM/meshes/Eslabon2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0.6 0 0.15"
+      rpy="0 0 -0.30158" />
+    <parent
+      link="Eslabon1" />
+    <child
+      link="Eslabon2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
